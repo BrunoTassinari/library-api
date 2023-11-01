@@ -4,7 +4,7 @@ import { CreateAuthorDTO } from '@dtos/Author/CreateAuthorDTO';
 export class CreateAuthorController {
   constructor(private readonly createAuthorUseCase: CreateAuthorUseCase) {}
 
-  handle = async (req: any, res: any) => {
+  handle = async (req: any, res: any, next: any) => {
     const { name, nationality } = req.body as CreateAuthorDTO;
 
     try {
@@ -15,9 +15,7 @@ export class CreateAuthorController {
 
       return res.status(201).json(author);
     } catch (error: any) {
-      return res.status(400).json({
-        message: error.message || 'Unexpected error.',
-      });
+     next(error);
     }
   };
 }

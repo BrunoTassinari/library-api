@@ -1,9 +1,22 @@
+import { Response } from 'express';
+
 class BaseException extends Error {
-  constructor(message: string = 'An error occurred') {
-    super(message);
+  public message: string;
+  public status: number;
+
+  constructor(message: string = 'An error occurred', status: number = 500) {
+    super();
+
+    this.message = message;
+    this.status = status;
   }
 
-  public getErrorMessage(): string {
-    return this.message;
+  sendError(res: any): void {
+    res.status(this.status).json({
+      status: this.status,
+      message: this.message,
+    });
   }
-}
+} 
+
+export { BaseException } 

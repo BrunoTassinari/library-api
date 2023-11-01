@@ -1,4 +1,4 @@
-import { AuthorsPrismaRepository } from '@database/implementations/authors-prisma-repository';
+import { AuthorsPrismaRepository } from '@implemetations/authors-prisma-repository';
 import { CreateAuthorDTO } from '@dtos/Author/CreateAuthorDTO';
 import { AuthorsFactory } from '@factories/AuthorsFactory';
 
