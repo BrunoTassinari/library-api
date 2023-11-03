@@ -1,4 +1,4 @@
-import { BaseException } from "./BaseException";
+import { BaseException } from './BaseException';
 
 class NotFoundException extends BaseException {
   constructor(message: string = 'Not found', status: number = 404) {
@@ -6,4 +6,4 @@ class NotFoundException extends BaseException {
   }
 }
 
-export { NotFoundException }
+export { NotFoundException };

@@ -2,6 +2,7 @@ import { Response } from 'express';
 
 class BaseException extends Error {
   public message: string;
+
   public status: number;
 
   constructor(message: string = 'An error occurred', status: number = 500) {
@@ -11,12 +12,12 @@ class BaseException extends Error {
     this.status = status;
   }
 
-  sendError(res: any): void {
+  sendError(res: Response): void {
     res.status(this.status).json({
       status: this.status,
       message: this.message,
     });
   }
-} 
+}
 
-export { BaseException } 
+export { BaseException };

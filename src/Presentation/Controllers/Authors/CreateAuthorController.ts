@@ -15,7 +15,7 @@ export class CreateAuthorController {
 
       return res.status(201).json(author);
     } catch (error: any) {
-     next(error);
+      return next(error);
     }
   };
 }
