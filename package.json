@@ -4,10 +4,11 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "dev": "ts-node-dev -r tsconfig-paths/register --transpile-only --ignore-watch node_modules src/server.ts"
   },
   "prisma": {
-    "schema": "src/Infrastructure/prisma/schema.prisma"
+    "schema": "src/infra/prisma/schema.prisma"
   },
   "devDependencies": {
     "@types/express": "^4.17.20",

@@ -1,5 +1,5 @@
-import { NotFoundException } from 'Domain/Exceptions/NotFoundException';
-import { BaseException } from '../../Domain/Exceptions/BaseException';
+import { NotFoundException } from 'Exceptions/NotFoundException';
+import { BaseException } from '../Exceptions/BaseException';
 
 class ExceptionFactory {
   public static newException(type: string = ''): BaseException {

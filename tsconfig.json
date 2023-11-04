@@ -11,6 +11,10 @@
     "noUnusedParameters": false,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
+    "target": "esnext",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "declaration": true,
     "outDir": "dist",
     "removeComments": true,
     "strict": true,
@@ -18,7 +22,6 @@
     "skipLibCheck": true,
     "sourceMap": true,
     "resolveJsonModule": true,
-    "target": "es2021",
     "types": ["node"],
     "baseUrl": "./src",
     "paths": {
@@ -36,5 +39,5 @@
     }
   },
   "exclude": ["node_modules", "dist", "tests" ],
-  "include": ["src/**/*"]
+  "include": ["src/**/*", "src/Routes"]
 }

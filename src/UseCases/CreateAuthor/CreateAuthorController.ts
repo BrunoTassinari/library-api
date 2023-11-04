@@ -1,5 +1,5 @@
-import { CreateAuthorUseCase } from '@useCases/CreateAuthor/CreateAuthorUseCase';
-import { CreateAuthorDTO } from '@dtos/Author/CreateAuthorDTO';
+import { CreateAuthorUseCase } from './CreateAuthorUseCase';
+import { CreateAuthorDTO } from './CreateAuthorDTO';
 
 export class CreateAuthorController {
   constructor(private readonly createAuthorUseCase: CreateAuthorUseCase) {}
@@ -8,7 +8,7 @@ export class CreateAuthorController {
     const { name, nationality } = req.body as CreateAuthorDTO;
 
     try {
-      const author = await this.createAuthorUseCase.execute({
+      const author = await this.createAuthorUseCase.execute(res, {
         name,
         nationality,
       });

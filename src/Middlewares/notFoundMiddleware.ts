@@ -1,4 +1,4 @@
-import { ExceptionFactory } from '@factories/ExceptionFactory';
+import { ExceptionFactory } from '../Factories/ExceptionFactory';
 import { Request, Response, NextFunction } from 'express';
 
 const notFoundMiddleware = (

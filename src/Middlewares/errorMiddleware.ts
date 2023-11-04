@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from 'express';
-import { BaseException } from 'Domain/Exceptions/BaseException';
-import { ExceptionFactory } from '@factories/ExceptionFactory';
+import { BaseException } from 'Exceptions/BaseException';
+import { ExceptionFactory } from '../Factories/ExceptionFactory';
 
 const errorMiddleware = (
   error: any,
@@ -8,7 +8,7 @@ const errorMiddleware = (
   res: Response,
   next: NextFunction, // eslint-disable-line @typescript-eslint/no-unused-vars
 ) => {
-  console.error(error);
+  console.error('error => ', error);
 
   if (error instanceof BaseException) {
     error.sendError(res);

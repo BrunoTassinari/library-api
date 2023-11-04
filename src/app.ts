@@ -1,5 +1,5 @@
 import express from 'express';
-import { authorsRoutes } from './Routes/AuthorRoutes';
+import { authorsRoutes } from 'Routes/AuthorRoutes';
 import { errorMiddleware } from './Middlewares/errorMiddleware';
 import { notFoundMiddleware } from './Middlewares/notFoundMiddleware';
 
