@@ -1,4 +1,4 @@
-import { AuthorsPrismaRepository } from "Infra/prisma/implementations/authors-prisma-repository";
+import { AuthorsPrismaRepository } from "Database/prisma/implementations/authors-prisma-repository";
 import { CreateAuthorUseCase } from "./CreateAuthorUseCase";
 import { CreateAuthorController } from "./CreateAuthorController";
 

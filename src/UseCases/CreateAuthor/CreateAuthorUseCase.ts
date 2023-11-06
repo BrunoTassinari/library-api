@@ -1,4 +1,4 @@
-import { AuthorsPrismaRepository } from '../../Infra/prisma/implementations/authors-prisma-repository';
+import { AuthorsPrismaRepository } from '../../Database/prisma/implementations/authors-prisma-repository';
 import { CreateAuthorDTO } from './CreateAuthorDTO';
 import { AuthorsFactory } from '../../Factories/AuthorsFactory';
 import { ExceptionFactory } from '../../Factories/ExceptionFactory';

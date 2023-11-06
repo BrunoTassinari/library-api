@@ -26,16 +26,7 @@
     "baseUrl": "./src",
     "paths": {
       "@/*": ["./src"],
-      "@/tests/*": ["tests/*"],
-      "@entities/*": ["Domain/Entities/*"],
-      "@repositories/*": ["Domain/Repositories/*"],
-      "@factories/*": ["Application/Factories/*"],
-      "@mappers/*": ["Application/Mappers/*"],
-      "@useCases/*": ["Application/UseCases/*"],
-      "@implemetations/*": ["Infrastructure/prisma/implementations/*"],
-      "@dtos/*": ["Presentation/DTOs/*"],
-      "@controllers/*": ["Presentation/Controllers/*"],
-      "@routes/*": ["Presentation/Routes/*"],
+      "@/tests/*": ["tests/*"]
     }
   },
   "exclude": ["node_modules", "dist", "tests" ],
