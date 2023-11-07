@@ -1,8 +1,9 @@
 import { Router } from 'express';
-import { createAuthorController } from 'UseCases/CreateAuthor';
+import { createAuthorController, listAuthorsController} from 'UseCases/Author';
 
 const authorsRoutes = Router();
 
 authorsRoutes.post('/authors', createAuthorController.handle);
+authorsRoutes.get('/authors', listAuthorsController.handle);
 
 export { authorsRoutes };

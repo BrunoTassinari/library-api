@@ -17,4 +17,10 @@ export class AuthorsPrismaRepository implements IAuthorsRepository {
 
     return authorCreated;
   }
+
+  list(): Promise<Author[]> {
+    const authors = this.prisma.author.findMany();
+
+    return authors;
+  }
 }

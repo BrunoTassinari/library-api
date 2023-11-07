@@ -5,15 +5,11 @@ export class CreateAuthorController {
   constructor(private readonly createAuthorUseCase: CreateAuthorUseCase) {}
 
   handle = async (req: any, res: any, next: any) => {
-    const { name, nationality } = req.body as CreateAuthorDTO;
-
     try {
-      const author = await this.createAuthorUseCase.execute(res, {
-        name,
-        nationality,
-      });
+      const body = req.body as CreateAuthorDTO;
+      const createAuthor = await this.createAuthorUseCase.execute(body);
 
-      return res.status(201).json(author);
+      return res.status(201).json(createAuthor);
     } catch (error: any) {
       return next(error);
     }
