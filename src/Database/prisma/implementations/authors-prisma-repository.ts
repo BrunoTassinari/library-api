@@ -33,4 +33,15 @@ export class AuthorsPrismaRepository implements IAuthorsRepository {
 
     return author;
   }
+
+  async update(id: string, author: Author): Promise<void> {
+    await this.prisma.author.update({
+      where: { id },
+      data: {
+        name: author.name,
+        nationality: author.nationality,
+        booksPublished: author.booksPublished,
+      },
+    });
+  }
 }
