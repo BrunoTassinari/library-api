@@ -44,4 +44,10 @@ export class AuthorsPrismaRepository implements IAuthorsRepository {
       },
     });
   }
+
+  async delete(id: string): Promise<void> {
+    await this.prisma.author.delete({
+      where: { id },
+    });
+  }
 }

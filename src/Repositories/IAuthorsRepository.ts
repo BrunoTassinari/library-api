@@ -8,4 +8,6 @@ export interface IAuthorsRepository {
   findById(id: string): Promise<Author | null>;
 
   update(id: string, author: Author): Promise<void>;
+
+  delete(id: string): Promise<void>;
 }
