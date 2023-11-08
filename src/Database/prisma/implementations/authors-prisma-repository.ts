@@ -23,4 +23,14 @@ export class AuthorsPrismaRepository implements IAuthorsRepository {
 
     return authors;
   }
+
+  async findById(id: string): Promise<Author | null> {
+    const author = await this.prisma.author.findUnique({
+      where: {
+        id,
+      },
+    });
+
+    return author;
+  }
 }
