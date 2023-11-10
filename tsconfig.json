@@ -2,7 +2,10 @@
   "compilerOptions": {
     "alwaysStrict": true,
     "noImplicitAny": true,
-    "rootDirs": ["src", "tests"],
+    "rootDirs": [
+      "src",
+      "tests"
+    ],
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "incremental": true,
@@ -22,13 +25,29 @@
     "skipLibCheck": true,
     "sourceMap": true,
     "resolveJsonModule": true,
-    "types": ["node"],
+    "types": [
+      "node"
+    ],
     "baseUrl": "./src",
     "paths": {
-      "@/*": ["./src"],
-      "@/tests/*": ["tests/*"]
+      "@/*": [
+        "./src"
+      ],
+      "@/tests/*": [
+        "tests/*"
+      ],
+      "@utils/*": [
+        "utils/*"
+      ],
     }
   },
-  "exclude": ["node_modules", "dist", "tests" ],
-  "include": ["src/**/*", "src/Routes"]
+  "exclude": [
+    "node_modules",
+    "dist",
+    "tests"
+  ],
+  "include": [
+    "src/**/*",
+    "src/Routes"
+  ]
 }
