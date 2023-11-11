@@ -9,10 +9,11 @@ export class BooksPrismaRepository implements IBooksRepository {
     const bookCreated = await this.prisma.book.create({
       data: {
         id: book.id,
-        name: book.name,
-        releaseDate: book.releaseDate,
+        title: book.title,
+        release_date: book.release_date,
         pages: book.pages,
-        authorId: book.authorId,
+        price: book.price,
+        author_id: book.author_id,
         description: book.description,
       },
     });

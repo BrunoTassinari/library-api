@@ -14,6 +14,22 @@ model Author {
   books_published Int
   created_at      DateTime @default(now())
   updated_at      DateTime @updatedAt
+  Book            Book[]
 
   @@map("authors")
+}
+
+model Book {
+  id           String   @id
+  author_id    String
+  author       Author   @relation(fields: [author_id], references: [id])
+  title        String
+  pages        Int
+  price        Float
+  description  String
+  release_date DateTime
+  created_at   DateTime @default(now())
+  updated_at   DateTime @updatedAt
+
+  @@map("books")
 }

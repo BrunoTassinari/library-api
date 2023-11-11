@@ -5,8 +5,8 @@ import { CreateBookDTO } from 'UseCases/Book/CreateBook/CreateBookDTO';
 export class BooksFactoy {
   public static createBook(props: CreateBookDTO): Book {
     const id = generateUUID();
-    const releaseDate = new Date(props.releaseDate);
-    const book = new Book({ ...props, id, releaseDate });
+    const release_date = new Date(props.release_date);
+    const book = new Book({ ...props, id, release_date });
 
     return book;
   }

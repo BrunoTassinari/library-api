@@ -1,15 +1,17 @@
 export class Book {
   public readonly id: string = '';
 
-  public readonly authorId: string = '';
+  public readonly author_id: string = '';
 
-  public name: string = '';
+  public title: string = '';
+
+  public price: number = 0;
 
   public pages: number = 0;
 
   public description: string = '';
 
-  public releaseDate: Date = new Date();
+  public release_date: Date = new Date();
 
   constructor(props: Book) {
     Object.assign(this, props);
