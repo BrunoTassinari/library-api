@@ -11,7 +11,7 @@ export class AuthorsPrismaRepository implements IAuthorsRepository {
         id: author.id,
         name: author.name,
         nationality: author.nationality,
-        booksPublished: author.booksPublished,
+        books_published: author.books_published,
       },
     });
 
@@ -40,7 +40,7 @@ export class AuthorsPrismaRepository implements IAuthorsRepository {
       data: {
         name: author.name,
         nationality: author.nationality,
-        booksPublished: author.booksPublished,
+        books_published: author.books_published,
       },
     });
   }

@@ -5,7 +5,7 @@ export class Author {
 
   public nationality: string = '';
 
-  public readonly booksPublished: number = 0;
+  public readonly books_published: number = 0;
 
   constructor(props: Author) {
     Object.assign(this, props);

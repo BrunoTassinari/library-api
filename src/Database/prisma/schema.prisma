@@ -8,27 +8,12 @@ datasource db {
 }
 
 model Author {
-  id             String   @id
-  name           String
-  nationality    String
-  booksPublished Int
-  created_at     DateTime @default(now())
-  updated_at     DateTime @updatedAt
-  Book           Book[]
+  id              String   @id
+  name            String
+  nationality     String
+  books_published Int
+  created_at      DateTime @default(now())
+  updated_at      DateTime @updatedAt
 
   @@map("authors")
-}
-
-model Book {
-  id          String   @id
-  name        String
-  authorId    String
-  author      Author   @relation(fields: [authorId], references: [id])
-  pages       Int
-  description String
-  releaseDate DateTime
-  created_at  DateTime @default(now())
-  updated_at  DateTime @updatedAt
-
-  @@map("books")
 }
