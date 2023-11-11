@@ -1,8 +1,8 @@
 export interface CreateBookDTO {
-  authorId: string;
-  name: string;
+  author_id: string;
+  title: string;
   pages: number;
   price: number;
   description: string;
-  releaseDate: Date;
+  release_date: Date;
 }

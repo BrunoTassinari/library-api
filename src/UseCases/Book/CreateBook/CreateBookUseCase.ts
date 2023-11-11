@@ -3,7 +3,7 @@ import { CreateBookDTO } from './CreateBookDTO';
 import { BooksFactoy } from 'Factories/BooksFactory';
 
 export class CreateBookUseCase {
-  constructor(private readonly booksRepository: BooksPrismaRepository) {}
+  constructor(private booksRepository: BooksPrismaRepository) {}
 
   async execute(data: CreateBookDTO) {
     const book = BooksFactoy.createBook(data);
