@@ -3,6 +3,7 @@ import { listAuthorsUseCase, listAuthorsController } from './ListAuthors';
 import { getAuthorUseCase, getAuthorController } from './GetAuthor';
 import { updateAuthorUseCase, updateAuthorController } from './UpdateAuthor';
 import { deleteAuthorUseCase, deleteAuthorController } from './DeleteAuthor';
+import { updateBooksPublishedUseCase } from './UpdateBooksPublished';
 
 export {
   createAuthorUseCase,
@@ -15,4 +16,5 @@ export {
   updateAuthorController,
   deleteAuthorUseCase,
   deleteAuthorController,
+  updateBooksPublishedUseCase,
 };

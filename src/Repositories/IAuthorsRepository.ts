@@ -10,4 +10,6 @@ export interface IAuthorsRepository {
   update(id: string, author: Author): Promise<void>;
 
   delete(id: string): Promise<void>;
+
+  updateBooksPublisehd(id: string, books_published: number): Promise<void>;
 }
