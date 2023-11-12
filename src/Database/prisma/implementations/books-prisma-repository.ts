@@ -26,4 +26,14 @@ export class BooksPrismaRepository implements IBooksRepository {
 
     return books;
   }
+
+  async findById(id: string): Promise<Book | null> {
+    const book = await this.prisma.book.findUnique({
+      where: {
+        id,
+      },
+    });
+
+    return book;
+  }
 }
