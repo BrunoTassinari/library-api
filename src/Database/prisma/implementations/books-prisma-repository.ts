@@ -36,4 +36,18 @@ export class BooksPrismaRepository implements IBooksRepository {
 
     return book;
   }
+
+  async update(id: string, book: Book): Promise<void> {
+    await this.prisma.book.update({
+      where: { id },
+      data: {
+        title: book.title,
+        release_date: book.release_date,
+        pages: book.pages,
+        price: book.price,
+        author_id: book.author_id,
+        description: book.description,
+      },
+    });
+  }
 }
