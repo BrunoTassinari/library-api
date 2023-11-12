@@ -1,3 +1,9 @@
-import { createAuthorUseCase, createAuthorController } from 'UseCases/Author';
+import { createBookUseCase, createBookController } from './CreateBook';
+import { listBooksUseCase, listBooksController } from './ListBooks';
 
-export { createAuthorUseCase, createAuthorController };
+export {
+  createBookUseCase,
+  createBookController,
+  listBooksUseCase,
+  listBooksController,
+};

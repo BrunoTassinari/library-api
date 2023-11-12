@@ -20,4 +20,10 @@ export class BooksPrismaRepository implements IBooksRepository {
 
     return bookCreated;
   }
+
+  async list(): Promise<Book[]> {
+    const books = await this.prisma.book.findMany();
+
+    return books;
+  }
 }
