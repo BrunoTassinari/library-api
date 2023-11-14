@@ -50,4 +50,12 @@ export class BooksPrismaRepository implements IBooksRepository {
       },
     });
   }
+
+  async delete(id: string): Promise<void> {
+    await this.prisma.book.delete({
+      where: {
+        id,
+      },
+    });
+  }
 }
