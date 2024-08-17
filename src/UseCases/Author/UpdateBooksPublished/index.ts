@@ -1,4 +1,4 @@
-import { AuthorsPrismaRepository } from 'Database/prisma/implementations/authors-prisma-repository';
+import { AuthorsPrismaRepository } from 'Infra/Database/prisma/implementations/authors-prisma-repository';
 import { UpdateBooksPublishedUseCase } from './UpdateBooksPublishedUseCase';
 
 const authorsPrismaRepository = new AuthorsPrismaRepository();

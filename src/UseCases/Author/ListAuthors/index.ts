@@ -1,6 +1,6 @@
-import { AuthorsPrismaRepository } from "Database/prisma/implementations/authors-prisma-repository";
-import { ListAuthorsUseCase } from "./ListAuthorsUseCase";
+import { AuthorsPrismaRepository } from "Infra/Database/prisma/implementations/authors-prisma-repository";
 import { ListAuthorsController } from "./ListAuthorsController";
+import { ListAuthorsUseCase } from "./ListAuthorsUseCase";
 
 const listAuthorsUseCase = new ListAuthorsUseCase(
   new AuthorsPrismaRepository()
@@ -8,4 +8,5 @@ const listAuthorsUseCase = new ListAuthorsUseCase(
 
 const listAuthorsController = new ListAuthorsController(listAuthorsUseCase);
 
-export { listAuthorsUseCase, listAuthorsController };
+export { listAuthorsController, listAuthorsUseCase };
+

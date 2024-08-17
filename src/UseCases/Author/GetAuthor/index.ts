@@ -1,9 +1,12 @@
-import { AuthorsPrismaRepository } from 'Database/prisma/implementations/authors-prisma-repository';
+import { DependencyContainer } from 'Infra/IoC/DependencyContainer';
+import { IAuthorsRepository } from 'Repositories/IAuthorsRepository';
 import { GetAuthorController } from './GetAuthorController';
 import { GetAuthorUseCase } from './GetAuthorUseCase';
 
-const getAuthorUseCase = new GetAuthorUseCase(new AuthorsPrismaRepository());
+const repository =
+  DependencyContainer.resolve<IAuthorsRepository>('IAuthorsRepository');
 
+const getAuthorUseCase = new GetAuthorUseCase(repository);
 const getAuthorController = new GetAuthorController(getAuthorUseCase);
 
-export { getAuthorUseCase, getAuthorController };
+export { getAuthorController, getAuthorUseCase };

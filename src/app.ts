@@ -5,7 +5,7 @@ import { booksRoutes } from 'Routes/BookRoutes';
 import { errorMiddleware } from './Middlewares/errorMiddleware';
 import { notFoundMiddleware } from './Middlewares/notFoundMiddleware';
 
-const app = express();
+const app: express = express();
 
 app.use(express.json());
 app.use(authorsRoutes);

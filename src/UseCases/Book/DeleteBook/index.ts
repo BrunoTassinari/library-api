@@ -1,8 +1,8 @@
-import { AuthorsPrismaRepository } from 'Database/prisma/implementations/authors-prisma-repository';
-import { BooksPrismaRepository } from 'Database/prisma/implementations/books-prisma-repository';
-import { DeleteBookUseCase } from './DeleteBookUseCase';
-import { UpdateBooksPublishedUseCase } from 'UseCases/Author/UpdateBooksPublished/UpdateBooksPublishedUseCase';
+import { AuthorsPrismaRepository } from 'Infra/Database/prisma/implementations/authors-prisma-repository';
+import { BooksPrismaRepository } from 'Infra/Database/prisma/implementations/books-prisma-repository';
 import { GetAuthorUseCase } from 'UseCases/Author/GetAuthor/GetAuthorUseCase';
+import { UpdateBooksPublishedUseCase } from 'UseCases/Author/UpdateBooksPublished/UpdateBooksPublishedUseCase';
+import { DeleteBookUseCase } from './DeleteBookUseCase';
 import { DeleteBookController } from './DeteleBookController';
 
 const bookRepository = new BooksPrismaRepository();
@@ -19,4 +19,5 @@ const deleteBookUseCase = new DeleteBookUseCase(
 
 const deleteBookController = new DeleteBookController(deleteBookUseCase);
 
-export { deleteBookUseCase, deleteBookController };
+export { deleteBookController, deleteBookUseCase };
+

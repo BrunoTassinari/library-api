@@ -1,5 +1,4 @@
-import { AuthorsPrismaRepository } from '../../../Database/prisma/implementations/authors-prisma-repository';
-import { ExceptionFactory } from '../../../Factories/ExceptionFactory';
+import { AuthorsPrismaRepository } from '../../../Infra/Database/prisma/implementations/authors-prisma-repository';
 
 export class ListAuthorsUseCase {
   constructor(

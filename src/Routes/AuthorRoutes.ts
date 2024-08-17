@@ -7,7 +7,7 @@ import {
   deleteAuthorController,
 } from 'UseCases/Author';
 
-const authorsRoutes = Router();
+const authorsRoutes: Router = Router();
 
 authorsRoutes.post('/authors', createAuthorController.handle);
 authorsRoutes.get('/authors/:id', getAuthorController.handle);

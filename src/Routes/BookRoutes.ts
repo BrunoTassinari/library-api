@@ -7,7 +7,7 @@ import {
 } from 'UseCases/Book';
 import { Router } from 'express';
 
-const booksRoutes = Router();
+const booksRoutes: Router = Router();
 
 booksRoutes.post('/books', createBookController.handle);
 booksRoutes.get('/books/:id', findBookController.handle);

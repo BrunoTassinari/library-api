@@ -1,6 +1,6 @@
-import { BooksPrismaRepository } from 'Database/prisma/implementations/books-prisma-repository';
 import { BooksFactoy } from 'Factories/BooksFactory';
 import { ExceptionFactory } from 'Factories/ExceptionFactory';
+import { BooksPrismaRepository } from 'Infra/Database/prisma/implementations/books-prisma-repository';
 import { UpdateBookDTO } from './UpdateBookDTO';
 
 export class UpdateBookUseCase {

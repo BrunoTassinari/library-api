@@ -1,35 +1,33 @@
-version: "3.7"
-
 services:
-  database_library:
+  library_db:
     image: postgres
-    container_name: database_library
+    container_name: library_db
     restart: always
     ports:
       - 5432:5432
     environment:
       - POSTGRES_USER=dockerdb_library
-      - POSTGRES_PASSWORD=library
-      - POSTGRES_DB=backend_library
+      - POSTGRES_PASSWORD=dockerdb_library
+      - POSTGRES_DB=library
     volumes:
       - pgdata:/data/postgres
   app:
-    container_name: backend_library
+    container_name: library_api
     build:
       dockerfile: Dockerfile
       context: .
       target: development
     volumes:
       - .:/usr/app
-    env_file: 
-    - .env
-    command: npm run start:dev
+    env_file:
+      - .env
+    command: npm run dev
     ports:
-      - 8080:8080
+      - 3000:3000
     links:
-      - database_library
-    depends_on: 
-      - database_library
+      - library_db
+    depends_on:
+      - library_db
 volumes:
   pgdata:
     driver: local

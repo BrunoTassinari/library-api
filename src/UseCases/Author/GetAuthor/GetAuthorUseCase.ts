@@ -1,11 +1,11 @@
-import { AuthorsPrismaRepository } from '../../../Database/prisma/implementations/authors-prisma-repository';
+import { IAuthorsRepository } from 'Repositories/IAuthorsRepository';
 import { ExceptionFactory } from '../../../Factories/ExceptionFactory';
 
 export class GetAuthorUseCase {
-  constructor(private authorsRepository: AuthorsPrismaRepository) {}
+  constructor(private repository: IAuthorsRepository) {}
 
   async execute(id: string) {
-    const author = await this.authorsRepository.findById(id);
+    const author = await this.repository.findById(id);
 
     if (!author) {
       throw ExceptionFactory.newCustomException(

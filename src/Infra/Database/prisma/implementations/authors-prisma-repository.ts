@@ -1,6 +1,6 @@
 import { PrismaClient } from '@prisma/client';
-import { IAuthorsRepository } from '../../../Repositories/IAuthorsRepository';
 import { Author } from 'Entities/Author';
+import { IAuthorsRepository } from '../../../../Repositories/IAuthorsRepository';
 
 export class AuthorsPrismaRepository implements IAuthorsRepository {
   prisma = new PrismaClient();

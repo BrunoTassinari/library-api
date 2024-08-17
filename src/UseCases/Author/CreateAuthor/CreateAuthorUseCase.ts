@@ -1,7 +1,6 @@
-import { AuthorsPrismaRepository } from '../../../Database/prisma/implementations/authors-prisma-repository';
-import { CreateAuthorDTO } from './CreateAuthorDTO';
 import { AuthorsFactory } from '../../../Factories/AuthorsFactory';
-import { ExceptionFactory } from '../../../Factories/ExceptionFactory';
+import { AuthorsPrismaRepository } from '../../../Infra/Database/prisma/implementations/authors-prisma-repository';
+import { CreateAuthorDTO } from './CreateAuthorDTO';
 
 export class CreateAuthorUseCase {
   constructor(

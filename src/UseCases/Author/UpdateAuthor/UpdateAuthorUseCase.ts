@@ -1,7 +1,7 @@
-import { AuthorsPrismaRepository } from 'Database/prisma/implementations/authors-prisma-repository';
-import { UpdateAuthorDTO } from './UpdateAuthorDTO';
-import { ExceptionFactory } from 'Factories/ExceptionFactory';
 import { AuthorsFactory } from 'Factories/AuthorsFactory';
+import { ExceptionFactory } from 'Factories/ExceptionFactory';
+import { AuthorsPrismaRepository } from 'Infra/Database/prisma/implementations/authors-prisma-repository';
+import { UpdateAuthorDTO } from './UpdateAuthorDTO';
 
 export class UpdateAuthorUseCase {
   constructor(private authorsRepository: AuthorsPrismaRepository) {}

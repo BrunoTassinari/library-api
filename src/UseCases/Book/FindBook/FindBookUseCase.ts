@@ -1,5 +1,5 @@
-import { BooksPrismaRepository } from 'Database/prisma/implementations/books-prisma-repository';
 import { ExceptionFactory } from 'Factories/ExceptionFactory';
+import { BooksPrismaRepository } from 'Infra/Database/prisma/implementations/books-prisma-repository';
 
 export class FindBookUseCase {
   constructor(private bookRepository: BooksPrismaRepository) {}
